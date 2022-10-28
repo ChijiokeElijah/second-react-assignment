@@ -2,9 +2,9 @@ import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 import React from "react";
 import "./App.css";
 import Home from "./components/Home.js";
-import Contact from "./components/Contact.js";
 import Users from "./components/Users.js";
 import Error from "./components/Error";
+import Farewell from "./components/Farewell";
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -45,13 +45,8 @@ function App() {
                 </Link>
               </li>
               <li>
-                <Link to="/abouts" className="nav-link">
+                <Link to="/about" className="nav-link">
                   ErrBound
-                </Link>
-              </li>
-              <li>
-                <Link to="/error" className="nav-link">
-                  Contact
                 </Link>
               </li>
               <li>
@@ -65,8 +60,7 @@ function App() {
             <div>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/about" element={<ErrorBoundary />} />
-                <Route path="/error" element={<Contact />} />
+                <Route path="/about" element={<Farewell />} />
                 <Route path="/users" element={<Users />} />
                 <Route path="*" element={<Error />} />
               </Routes>
