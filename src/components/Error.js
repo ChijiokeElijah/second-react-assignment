@@ -1,6 +1,7 @@
 import React from "react";
 import ErrorImg from "../images/error.png";
 
+
 import "../App.css";
 
 export default function Error() {
